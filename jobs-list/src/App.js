@@ -50,17 +50,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Info />
-        <Form joobsMethod={this.gettingJobs} />
-        <Jobs
-          salary={this.state.salary}
-          name={this.state.name}
-          url={this.state.url}
-          city={this.state.city}
-          phone={this.state.phone}
-          error={this.state.error}
-        />
+      <div className="wrapper">
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="info">
+                <Info />
+              </div>
+              <div className="form">
+                <Form joobsMethod={this.gettingJobs} />
+                <Jobs
+                  salary={this.state.salary}
+                  name={this.state.name}
+                  url={this.state.url}
+                  city={this.state.city}
+                  phone={this.state.phone}
+                  error={this.state.error}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

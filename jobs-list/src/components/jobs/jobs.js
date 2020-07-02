@@ -1,7 +1,8 @@
 import React from "react";
+import "./jobs.css";
 
 const Jobs = props => (
-  <div>
+  <div className="infojob">
     {props.city && (
       <div>
         <p>Зарплата: {props.salary}</p>
@@ -11,7 +12,7 @@ const Jobs = props => (
         <p>Контактный телефон: {props.phone}</p>
       </div>
     )}
-    <p>{props.error}</p>
+    <p className="error">{props.error}</p>
   </div>
 );
 
